@@ -2,7 +2,7 @@ import React from "react";
 import { IconSearch } from "@tabler/icons-react";
 import Link from "next/link";
 import Image from "next/image";
-import { ProgressClass } from ".";
+import { ProgressClass, MateriClass } from ".";
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
       id="home"
       className="rounded-3xl bg-white h-screen border-[#D87582] border-[1px]"
     >
-      <div className="search-bar flex m-5 mb-10 px-5 py-1 rounded-3xl border-[#D87582] border-[1px]">
+      <div className="search-bar flex m-5 px-5 py-1 rounded-3xl border-[#D87582] border-[1px]">
         <IconSearch />
         <input
           type="text"
@@ -18,7 +18,7 @@ const Home = () => {
           className="w-full px-5 outline-none"
         />
       </div>
-      <div className="menu flex justify-center items-center gap-44">
+      <div className="menu flex justify-center items-center gap-44 mt-10">
         <Link href="/roadmap">
           <div className="flex flex-col items-center">
             <Image src="/roadmap.png" width={70} height={70} />
@@ -45,6 +45,7 @@ const Home = () => {
         </Link>
       </div>
       <ProgressClass />
+      <MateriClass />
     </section>
   );
 };

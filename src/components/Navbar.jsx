@@ -5,7 +5,7 @@ import Image from "next/image";
 const Navbar = () => {
   return (
     <header className="bg-[#EAB595] w-full flex justify-between items-center transition-transform duration-300">
-      <div className="logo">
+      <div className="logo ml-5">
         <Image src="/logo.png" width={70} height={70} />
       </div>
       <nav className="nav-list bg-[#EAB595] flex justify-between mx-auto items-center">
@@ -22,7 +22,7 @@ const Navbar = () => {
           ))}
         </ul>
       </nav>
-      <a href="#subscription" className="p-3 text-right font-extrabold text-lg"> Langganan </a>
+      <a href="#subscription" className="mr-5 text-right font-extrabold text-lg"> Langganan </a>
     </header>
   );
 };
