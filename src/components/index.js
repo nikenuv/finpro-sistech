@@ -1,7 +1,9 @@
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Home from "./Home";
-import ProgressClass from "./ProgressClass";
-import MateriClass from "./MateriClass";
+import Progress from "./Progress";
+import Materi from "./Materi";
+import Recommendation from "./Recommendation";
+import Xp from "./Xp";
 
-export { Navbar, Hero, Home, ProgressClass, MateriClass}
+export { Navbar, Hero, Home, Progress, Materi, Recommendation, Xp}

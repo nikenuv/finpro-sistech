@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
 
-const ProgressClass = () => {
+const Progress = () => {
   return (
-    <section className="progress-class mx-10 px-2">
+    <section className="progress mx-10 px-2">
       <h3 className="mt-10 mb-5 font-bold">Lanjutkan Kelasmu</h3>
       <div className="progress-wrapper flex gap-10">
-        <div className="card flex w-[450px] px-5 py-5 bg-[#E6B2C0] rounded-2xl">
+        <div className="flex w-[450px] px-5 py-5 bg-[#E6B2C0] rounded-2xl">
           <Image
             className="rounded-full"
             width={70}
@@ -17,10 +17,7 @@ const ProgressClass = () => {
           <div className="ml-5">
             <p>Modul 1</p>
             <p>Penalaran Kuantitatif</p>
-            <div>
-              <div className="progress-bar"></div>
-              <p className="progress-status"> 1/3 Materi </p>
-            </div>
+            <p className="progress-status"> 1/3 Materi </p>
           </div>
         </div>
         <div className="card flex w-[450px] px-5 py-5 bg-[#E6B2C0] rounded-2xl">
@@ -62,4 +59,4 @@ const ProgressClass = () => {
   );
 };
 
-export default ProgressClass;
+export default Progress;

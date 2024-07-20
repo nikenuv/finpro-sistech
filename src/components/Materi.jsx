@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
-const MateriClass = () => {
+const Materi = () => {
   return (
-    <section className="materi-class mx-10 px-2">
+    <section className="materi mx-10 px-2">
       <h3 className="mt-10 mb-5 font-bold">Materi</h3>
-      <div className="materi-wrapper flex">
+      <div className="materi-wrapper flex justify-center">
         <div className="card w-[250px] h-[160px] mr-10 py-5 border-[1px] border-[#E6B2C0] rounded-2xl">
           <Image
             className="rounded-full mx-auto"
@@ -51,4 +51,4 @@ const MateriClass = () => {
   );
 };
 
-export default MateriClass;
+export default Materi;
