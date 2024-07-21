@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import RasioCard from "./rasionalisasiCard";
+import RasioCard from "./RasionalisasiCard";
 import Form from "./Form";
 
 const Page = () => {
