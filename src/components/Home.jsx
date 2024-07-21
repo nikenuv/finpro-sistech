@@ -15,30 +15,30 @@ const Home = () => {
         <input
           type="text"
           placeholder="Cari Materi Belajar"
-          className="w-full px-5 outline-none"
+          className="w-full px-3 md:px-5 outline-none"
         />
       </div>
-      <div className="menu flex justify-center items-center gap-44 mt-10">
+      <div className="menu flex flex-col md:flex-row md:justify-center items-center gap-20 mt-8">
         <Link href="/roadmap">
-          <div className="flex flex-col items-center">
-            <Image src="/roadmap.png" width={70} height={70} />
-            <p className="text-lg mt-2 text-black hover:text-gray-900">
+          <div className="flex flex-col items-center text-center">
+            <Image src="/roadmap.png" width={60} height={60} className="md:w-70 md:h-70" />
+            <p className="text-base md:text-lg mt-2 text-black hover:text-gray-900">
               Roadmap
             </p>
           </div>
         </Link>
         <Link href="/rasionalisasi">
-          <div className="flex flex-col items-center">
-            <Image src="/rasionalisasi.png" width={70} height={70} />
-            <p className="text-lg mt-2 text-black hover:text-gray-900">
+          <div className="flex flex-col items-center text-center">
+            <Image src="/rasionalisasi.png" width={60} height={60} className="md:w-70 md:h-70" />
+            <p className="text-base md:text-lg mt-2 text-black hover:text-gray-900">
               Rasionalisasi
             </p>
           </div>
         </Link>
         <Link href="/dailytest">
-          <div className="flex flex-col items-center">
-            <Image src="/dailytest.png" width={70} height={70} />
-            <p className="text-lg mt-2 text-black hover:text-gray-900">
+          <div className="flex flex-col items-center text-center">
+            <Image src="/dailytest.png" width={60} height={60} className="md:w-70 md:h-70" />
+            <p className="text-base md:text-lg mt-2 text-black hover:text-gray-900">
               Daily Test
             </p>
           </div>

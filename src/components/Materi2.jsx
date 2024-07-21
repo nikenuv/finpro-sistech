@@ -4,7 +4,7 @@ import Image from "next/image";
 import NextButton from "./../../public/next-icon.png";
 import BackButton from "./../../public/back-icon.png";
 import Icon from "./../../public/icon.png";
-import Sidebar from "./Sidebar";
+import Sidebar from "./Sidebar2";
 
 const Materi2 = () => {
   return (
