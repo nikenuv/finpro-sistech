@@ -3,9 +3,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import ButtonSlide from './../../public/button-slide.png';
-import iconimg from './../../public/materi1.jpeg';
-import timeline from "./../../public/timeline.png";
+import ButtonSlide from './../../../public/button-slide.png';
+import iconimg from './../../../public/materi1.jpeg';
 
 const Menus = [
   { title: 'Materi1: Peran Pemimpin dalam Pemberdayaan', path: '/', icon: iconimg },

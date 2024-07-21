@@ -7,7 +7,6 @@ export default function Homepage() {
     <main className={twMerge("bg-[#EFD2C9]", additionalClasses)}>
       <Hero />
       <Home />
-      <Materi2 />
     </main>
   );
 }
