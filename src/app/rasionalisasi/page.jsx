@@ -1,20 +1,50 @@
 "use client";
-import React, { useState } from "react";
-import { Navbar } from "@/components";
-import RasioCard from "./RasionalisasiCard";
+import React, { useState, useEffect } from "react";
+import RasioCard from "./rasionalisasiCard";
 import Form from "./Form";
 
-const page = () => {
+const Page = () => {
   const [showForm, setShowForm] = useState(false);
+  const [selections, setSelections] = useState([]);
+  const [currentCard, setCurrentCard] = useState(null);
 
-  const handleCardClick = () => {
-    console.log("Card clicked!");
+  const handleCardClick = (index) => {
+    setCurrentCard(index);
     setShowForm(true);
   };
 
+  const handleCloseModal = () => {
+    setShowForm(false);
+  };
+
+  const handleSaveSelection = (selection) => {
+    setSelections((prevSelections) => {
+      const newSelections = [...prevSelections];
+      newSelections[currentCard] = selection;
+      return newSelections;
+    });
+    setShowForm(false);
+  };
+
+  const handleDeleteSelection = (index) => {
+    setSelections((prevSelections) => {
+      const newSelections = [...prevSelections];
+      newSelections[index] = null;
+      return newSelections;
+    });
+  };
+
+  useEffect(() => {
+    const storedSelections = JSON.parse(localStorage.getItem("selections"));
+    if (storedSelections) setSelections(storedSelections);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("selections", JSON.stringify(selections));
+  }, [selections]);
+
   return (
     <div>
-      <Navbar />
       <div className="pt-20">
         <div className="flex justify-center items-center">
           <div className="border border-[#E6B2C0] rounded-2xl p-8 justify-between items-center w-50%">
@@ -23,18 +53,21 @@ const page = () => {
               <p className="text-xl font-bold cursor-pointer">Ubah Kampus</p>
             </div>
             <div className="flex gap-4 mb-4 lg:mb-0 justify-between items-center">
-              <RasioCard title="Pilihan Pertama" onClick={handleCardClick} />
-              <RasioCard title="Pilihan Kedua" onClick={handleCardClick} />
-              <RasioCard title="Pilihan Ketiga" onClick={handleCardClick} />
-              <RasioCard title="Pilihan Keempat" onClick={handleCardClick} />
+              {["Pilihan Pertama", "Pilihan Kedua", "Pilihan Ketiga", "Pilihan Keempat"].map((title, index) => (
+                <RasioCard
+                  key={index}
+                  title={title}
+                  onClick={() => handleCardClick(index)}
+                  selection={selections[index]}
+                  onDelete={() => handleDeleteSelection(index)}
+                />
+              ))}
             </div>
           </div>
         </div>
         {showForm && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white p-8 rounded-lg shadow-lg">
-              <Form />
-            </div>
+            <Form handleClose={handleCloseModal} handleSave={handleSaveSelection} />
           </div>
         )}
       </div>
@@ -42,4 +75,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

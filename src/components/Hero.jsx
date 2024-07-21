@@ -5,7 +5,6 @@ import Image from 'next/image'
 const Hero = () => {
   return (
     <>
-      <Navbar />
       <section className="hero px-5 md:px-20 py-7">
         <div className="text-center md:text-left">
           <h1 className="text-[28px] font-bold">Hi Jaehyun, Welcome Back!</h1>
