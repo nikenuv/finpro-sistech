@@ -3,48 +3,58 @@ import Image from "next/image";
 
 const Materi = () => {
   return (
-    <section className="materi mx-10 px-2">
-      <h3 className="mt-10 mb-5 font-bold">Materi</h3>
-      <div className="materi-wrapper flex justify-center">
-        <div className="card w-[250px] h-[160px] mr-10 py-5 border-[1px] border-[#E6B2C0] rounded-2xl">
+    <section className="materi mx-5 md:mx-10 px-2">
+      <h3 className="mt-10 mb-5 font-bold text-xl md:text-2xl">
+        Materi
+      </h3>
+      <div className="materi-wrapper flex flex-wrap justify-center gap-5">
+        <div className="card w-full sm:w-[250px] h-[160px] py-5 border-[1px] border-[#E6B2C0] rounded-2xl flex flex-col items-center">
           <Image
-            className="rounded-full mx-auto"
+            className="rounded-full"
             width={70}
             height={70}
             src="/materi1.jpeg"
             alt="materi 1"
           />
-          <p className="text-center mt-2"> Kemampuan Penalaran <br/> Umum </p>
+          <p className="text-center mt-2 text-sm sm:text-base">
+            Kemampuan Penalaran <br /> Umum
+          </p>
         </div>
-        <div className="card w-[250px] h-[160px] mr-10 py-5 border-[1px] border-[#E6B2C0] rounded-2xl">
+        <div className="card w-full sm:w-[250px] h-[160px] py-5 border-[1px] border-[#E6B2C0] rounded-2xl flex flex-col items-center">
           <Image
-            className="rounded-full mx-auto"
+            className="rounded-full"
             width={70}
             height={70}
             src="/materi2.jpeg"
-            alt="materi 1"
+            alt="materi 2"
           />
-          <p className="text-center mt-2"> Pengetahuan dan <br/> Pemahaman Umum </p>
+          <p className="text-center mt-2 text-sm sm:text-base">
+            Pengetahuan dan <br /> Pemahaman Umum
+          </p>
         </div>
-        <div className="card w-[250px] h-[160px] mr-10 py-5 border-[1px] border-[#E6B2C0] rounded-2xl">
+        <div className="card w-full sm:w-[250px] h-[160px] py-5 border-[1px] border-[#E6B2C0] rounded-2xl flex flex-col items-center">
           <Image
-            className="rounded-full mx-auto"
+            className="rounded-full"
             width={70}
             height={70}
             src="/materi3.jpeg"
-            alt="materi 1"
+            alt="materi 3"
           />
-          <p className="text-center mt-2"> Pemahaman Bacaan <br/> dan Menulis </p>
+          <p className="text-center mt-2 text-sm sm:text-base">
+            Pemahaman Bacaan <br /> dan Menulis
+          </p>
         </div>
-        <div className="card w-[250px] h-[160px] mr-10 py-5 border-[1px] border-[#E6B2C0] rounded-2xl">
+        <div className="card w-full sm:w-[250px] h-[160px] py-5 border-[1px] border-[#E6B2C0] rounded-2xl flex flex-col items-center">
           <Image
-            className="rounded-full mx-auto"
+            className="rounded-full"
             width={70}
             height={70}
             src="/materi4.jpeg"
-            alt="materi 1"
+            alt="materi 4"
           />
-          <p className="text-center mt-2"> Pengetahuan <br/> Kuantitatif </p>
+          <p className="text-center mt-2 text-sm sm:text-base">
+            Pengetahuan <br /> Kuantitatif
+          </p>
         </div>
       </div>
     </section>
