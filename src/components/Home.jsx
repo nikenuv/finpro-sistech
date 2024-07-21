@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="rounded-3xl bg-white border-[#D87582] border-[1px]"
+      className="rounded-3xl bg-white border-primary-2 border-[1px]"
     >
-      <div className="search-bar flex m-5 px-5 py-1 rounded-3xl border-[#D87582] border-[1px]">
+      <div className="search-bar flex m-5 px-5 py-1 rounded-3xl border-primary-2 border-[1px]">
         <IconSearch />
         <input
           type="text"

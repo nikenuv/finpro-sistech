@@ -7,7 +7,7 @@ const Recommendation = () => {
     <section className="recommendation mx-10 px-2">
       <h3 className="mt-10 mb-5 font-bold">Rekomendasi Untukmu</h3>
       <div className="recom-wrapper flex gap-5">
-        <div className="card w-[370px] h-[370px] mb-5 px-5 py-5 bg-[#E6B2C0] rounded-2xl">
+        <div className="card w-[370px] h-[370px] mb-5 px-5 py-5 bg-primary-3 rounded-2xl">
           <Image
             className="rounded-3xl"
             width={350}
@@ -43,7 +43,7 @@ const Recommendation = () => {
             </div>
           </div>
         </div>
-        <div className="card w-[370px] h-[370px] mb-5 px-5 py-5 bg-[#E6B2C0] rounded-2xl">
+        <div className="card w-[370px] h-[370px] mb-5 px-5 py-5 bg-primary-3 rounded-2xl">
           <Image
             className="rounded-3xl"
             width={350}
@@ -79,7 +79,7 @@ const Recommendation = () => {
             </div>
           </div>
         </div>
-        <div className="card w-[370px] h-[370px] mb-5 px-5 py-5 bg-[#E6B2C0] rounded-2xl">
+        <div className="card w-[370px] h-[370px] mb-5 px-5 py-5 bg-primary-3 rounded-2xl">
           <Image
             className="rounded-3xl"
             width={350}
@@ -115,7 +115,7 @@ const Recommendation = () => {
             </div>
           </div>
         </div>
-        <div className="card w-[370px] h-[370px] mb-5 px-5 py-5 bg-[#E6B2C0] rounded-2xl">
+        <div className="card w-[370px] h-[370px] mb-5 px-5 py-5 bg-primary-3 rounded-2xl">
           <Image
             className="rounded-3xl"
             width={350}

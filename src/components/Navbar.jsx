@@ -4,11 +4,11 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <header className="bg-[#EAB595] w-full flex justify-between items-center transition-transform duration-300">
+    <header className="bg-primary-1 w-full flex justify-between items-center transition-transform duration-300">
       <div className="logo ml-5">
         <Image src="/logo.png" width={70} height={70} />
       </div>
-      <nav className="nav-list bg-[#EAB595] flex justify-between mx-auto items-center">
+      <nav className="nav-list bg-primary-1 flex justify-between mx-auto items-center">
         <ul className="flex gap-10">
           {NavbarData.map((nav) => (
             <li

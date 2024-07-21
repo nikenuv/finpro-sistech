@@ -6,4 +6,6 @@ import Materi from "./Materi";
 import Recommendation from "./Recommendation";
 import Xp from "./Xp";
 
-export { Navbar, Hero, Home, Progress, Materi, Recommendation, Xp}
+import Materi2 from "./Materi2";
+
+export { Navbar, Hero, Home, Progress, Materi, Recommendation, Xp, Materi2}

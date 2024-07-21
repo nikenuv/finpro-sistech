@@ -1,4 +1,4 @@
-import { Hero, Home } from "../components";
+import { Hero, Home, Materi2 } from "../components";
 import { twMerge } from "tailwind-merge";
 
 export default function Homepage() {
@@ -7,6 +7,7 @@ export default function Homepage() {
     <main className={twMerge("bg-[#EFD2C9]", additionalClasses)}>
       <Hero />
       <Home />
+      <Materi2 />
     </main>
   );
 }
