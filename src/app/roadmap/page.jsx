@@ -29,7 +29,7 @@ const GoalsSelection = () => {
               key={goal.days}
               onClick={() => handleGoalSelection(goal)}
               className={`py-2 px-4 text-left ${
-                selectedGoal === goal.days ? 'bg-primary-1 text-white' : ''
+                selectedGoal === goal.days ? 'bg-[#E6B2C0] text-white' : ''
               }`}
             >
               <div className="flex justify-between items-center ">
