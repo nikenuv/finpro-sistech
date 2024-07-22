@@ -3,34 +3,24 @@
 import React from "react";
 import Image from "next/image";
 
-const Roadmap = () => {
-  const skills = [
-    { name: 'Kemampuan Penalaran Umum', progress: 25 },
-    { name: 'Pengetahuan dan Pemahaman Umum', progress: 10 },
-    { name: 'Pemahaman Bacaan dan Menulis', progress: 15 },
-    { name: 'Pengetahuan Kuantitatif', progress: 5 },
-  ];
+const Roadmap = ({ roadmap }) => {
+  if (!roadmap) return null;
 
-  const dailyQuests = [
-    { name: 'Quest 1', progress: 2 },
-    { name: 'Quest 2', progress: 2 },
-    { name: 'Quest 3', progress: 2 },
-    { name: 'Quest 4', progress: 2 },
-  ];
+  const { name, skills, dailyQuests } = roadmap;
 
   return (
     <div className="flex h-screen bg-[#EFD2C9]">
       <div className="grid grid-cols-3 w-full p-4 gap-4">
         <div className="bg-white shadow-lg p-4">
           <div className="flex flex-col items-center mb-8">
-          <Image 
-            className="rounded-full"
-            width={100} 
-            height={100} 
-            src="/profile.jpeg" 
-            alt="profile"
-          />
-            <h2 className="text-xl font-semibold">John Doe</h2>
+            <Image 
+              className="rounded-full"
+              width={100} 
+              height={100} 
+              src="/profile.jpeg" 
+              alt="profile"
+            />
+            <h2 className="text-xl font-semibold">{name}</h2>
           </div>
           <div className="mb-8">
             <h3 className="text-lg font-semibold mb-2">25% Completed</h3>
