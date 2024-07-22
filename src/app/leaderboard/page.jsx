@@ -23,7 +23,7 @@ const Index = () => {
         return (
           <>
             <div className="flex space-x-4 mt-6">
-              <div className="border rounded-3xl p-4 flex flex-col items-center w-1/3">
+              <div className="border-2 border-primary-2 rounded-3xl p-4 flex flex-col items-center w-1/3">
                 <div className="w-full h-32 bg-gray-200 rounded-3xl mb-2 overflow-hidden">
                   <Image src={Xaviera} alt="Putri Malika" className="w-full h-full object-cover" />
                 </div>
@@ -33,7 +33,7 @@ const Index = () => {
                   <div>90/100</div>
                 </div>
               </div>
-              <div className="border rounded-3xl p-4 flex flex-col items-center w-1/3">
+              <div className="border-2 border-primary-2 rounded-3xl p-4 flex flex-col items-center w-1/3">
                 <div className="w-full h-32 bg-gray-200 rounded-3xl mb-2 overflow-hidden">
                   <Image src={Sandy} alt="Nando Catur" className="w-full h-full object-cover" />
                 </div>
@@ -43,7 +43,7 @@ const Index = () => {
                   <div>88/100</div>
                 </div>
               </div>
-              <div className="border rounded-3xl p-4 flex flex-col items-center w-1/3">
+              <div className="border-2 border-primary-2 rounded-3xl p-4 flex flex-col items-center w-1/3">
                 <div className="w-full h-32 bg-gray-200 rounded-3xl mb-2 overflow-hidden">
                   <Image src={Axel} alt="Nadhin Amizah" className="w-full h-full object-cover" />
                 </div>
@@ -55,21 +55,21 @@ const Index = () => {
               </div>
             </div>
             <table className="min-w-full divide-y divide-gray-200 mt-6">
-              <thead className="bg-gray-50">
+              <thead className="">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rank</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nama</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Universitas dan Jurusan</th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nilai</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-primary-1">Rank</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-primary-2 bg-opacity-80">Nama</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-primary-1">Universitas dan Jurusan</th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider bg-primary-2 bg-opacity-80">Nilai</th>
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 {participants.map((participant) => (
                   <tr key={participant.rank}>
-                    <td className="px-6 py-4 whitespace-nowrap">{participant.rank}</td>
-                    <td className="px-6 py-4 whitespace-nowrap">{participant.name}</td>
-                    <td className="px-6 py-4 whitespace-nowrap">{participant.university}</td>
-                    <td className="px-6 py-4 whitespace-nowrap">{participant.score}</td>
+                    <td className="px-6 py-4 whitespace-nowrap bg-primary-1 bg-opacity-50">{participant.rank}</td>
+                    <td className="px-6 py-4 whitespace-nowrap bg-primary-2 bg-opacity-50">{participant.name}</td>
+                    <td className="px-6 py-4 whitespace-nowrap bg-primary-1 bg-opacity-50">{participant.university}</td>
+                    <td className="px-6 py-4 whitespace-nowrap bg-primary-2 bg-opacity-50">{participant.score}</td>
                   </tr>
                 ))}
               </tbody>
