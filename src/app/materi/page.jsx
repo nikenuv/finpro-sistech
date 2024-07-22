@@ -10,7 +10,7 @@ const Page = () => {
     <>
     <section className="flex w-full px-10 py-5 bg-[#EFD2C9]">
       <div className="flex gap-5">
-      <Link href="/materi" className="my-auto">
+      <Link href="/" className="my-auto">
             <IconArrowLeft
               className="cursor-pointer"
         /></Link>
