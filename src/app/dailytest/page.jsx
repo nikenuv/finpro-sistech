@@ -4,6 +4,7 @@ import SidebarTest from "@/components/SidebarTest";
 import Question from "@/components/Question";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const questions = [
   {
@@ -61,7 +62,7 @@ const questions = [
 const Page = () => {
   const [selectedQuestion, setSelectedQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
-  const [clearAnswer, setClearAnswer] = useState(false);
+  const router = useRouter();
 
   const handleSelectAnswer = (questionId, answer) => {
     setAnswers((prev) => ({ ...prev, [questionId]: answer }));
@@ -80,8 +81,7 @@ const Page = () => {
   };
 
   const finishQuiz = () => {
-    alert("Quiz Finished!");
-    // Add any additional logic for finishing the quiz
+    router.push("/leaderboard");
   };
 
   return (
@@ -97,34 +97,33 @@ const Page = () => {
           </h3>
         </div>
       </nav>
-      <div className="flex">
-        <div className="flex flex-col lg:flex-row flex-grow">
-          <SidebarTest
-            questions={questions}
-            selectedQuestion={selectedQuestion}
-            setSelectedQuestion={setSelectedQuestion}
-            answers={answers}
+      <div className="flex flex-col lg:flex-row">
+        <SidebarTest
+          questions={questions}
+          selectedQuestion={selectedQuestion}
+          setSelectedQuestion={setSelectedQuestion}
+          answers={answers}
+        />
+        <div className="flex-grow p-8">
+          <Question
+            question={questions[selectedQuestion]}
+            selectedAnswer={answers[questions[selectedQuestion].id]}
+            onSelectAnswer={handleSelectAnswer}
           />
-          <div className="flex-grow p-8">
-            <Question
-              question={questions[selectedQuestion]}
-              selectedAnswer={answers[questions[selectedQuestion].id]}
-              onSelectAnswer={handleSelectAnswer}
-            />
-            <button
-              className="
+          <button
+            className="
               text-red-500
               py-2
               px-4
             "
-              onClick={handleClearAnswer}
-            >
-              Hapus Jawaban
-            </button>
-            <div className="flex justify-between mt-4">
-              {selectedQuestion > 0 && (
-                <button
-                  className="
+            onClick={handleClearAnswer}
+          >
+            Hapus Jawaban
+          </button>
+          <div className="flex justify-between mt-4">
+            {selectedQuestion > 0 && (
+              <button
+                className="
                   bg-blue-500
                   text-white
                   py-2
@@ -135,16 +134,14 @@ const Page = () => {
                   duration-200
                   ease-in-out
                   "
-                  onClick={() =>
-                    setSelectedQuestion((prev) => Math.max(prev - 1, 0))
-                  }
-                >
-                  &lt; Sebelumnya
-                </button>
-              )}
-              {selectedQuestion < questions.length - 1 ? (
-                <button
-                  className="
+                onClick={() => setSelectedQuestion((prev) => Math.max(prev - 1, 0))}
+              >
+                &lt; Sebelumnya
+              </button>
+            )}
+            {selectedQuestion < questions.length - 1 ? (
+              <button
+                className="
                   bg-blue-500
                   text-white
                   py-2
@@ -155,13 +152,13 @@ const Page = () => {
                   duration-200
                   ease-in-out
                   "
-                  onClick={nextQuestion}
-                >
-                  Selanjutnya &gt;
-                </button>
-              ) : (
-                <button
-                  className="
+                onClick={nextQuestion}
+              >
+                Selanjutnya &gt;
+              </button>
+            ) : (
+              <button
+                className="
                   bg-green-500
                   text-white
                   py-2
@@ -172,12 +169,11 @@ const Page = () => {
                   duration-200
                   ease-in-out
                   "
-                  onClick={finishQuiz}
-                >
-                  Finish
-                </button>
-              )}
-            </div>
+                onClick={finishQuiz}
+              >
+                Finish
+              </button>
+            )}
           </div>
         </div>
       </div>

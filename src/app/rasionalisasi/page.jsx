@@ -44,33 +44,31 @@ const Page = () => {
   }, [selections]);
 
   return (
-    <div>
-      <div className="pt-20">
-        <div className="flex justify-center items-center">
-          <div className="border border-[#E6B2C0] rounded-2xl p-8 justify-between items-center w-50%">
-            <div className="flex flex-col lg:flex-row items-center justify-between w-full mb-4">
-              <h2 className="text-xl font-bold">Kampus Impianmu</h2>
-              <p className="text-xl font-bold cursor-pointer">Ubah Kampus</p>
-            </div>
-            <div className="flex gap-4 mb-4 lg:mb-0 justify-between items-center">
-              {["Pilihan Pertama", "Pilihan Kedua", "Pilihan Ketiga", "Pilihan Keempat"].map((title, index) => (
-                <RasioCard
-                  key={index}
-                  title={title}
-                  onClick={() => handleCardClick(index)}
-                  selection={selections[index]}
-                  onDelete={() => handleDeleteSelection(index)}
-                />
-              ))}
-            </div>
+    <div className="min-h-screen bg-gray-100">
+      <div className="pt-20 flex justify-center">
+        <div className="border border-[#E6B2C0] rounded-2xl p-8 w-full max-w-5xl">
+          <div className="flex flex-col lg:flex-row items-center justify-between w-full mb-4">
+            <h2 className="text-xl font-bold">Kampus Impianmu</h2>
+            <p className="text-xl font-bold cursor-pointer">Ubah Kampus</p>
+          </div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-4 lg:mb-0">
+            {["Pilihan Pertama", "Pilihan Kedua", "Pilihan Ketiga", "Pilihan Keempat"].map((title, index) => (
+              <RasioCard
+                key={index}
+                title={title}
+                onClick={() => handleCardClick(index)}
+                selection={selections[index]}
+                onDelete={() => handleDeleteSelection(index)}
+              />
+            ))}
           </div>
         </div>
-        {showForm && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <Form handleClose={handleCloseModal} handleSave={handleSaveSelection} />
-          </div>
-        )}
       </div>
+      {showForm && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <Form handleClose={handleCloseModal} handleSave={handleSaveSelection} />
+        </div>
+      )}
     </div>
   );
 };

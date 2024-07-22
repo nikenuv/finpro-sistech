@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
-const CardMateri = ({ icon, title, progress }) => {
+const CardMateri = ({icon, title, progress }) => {
   return (
     <div className="flex items-center p-4 bg-[#D8758280] rounded-lg shadow-md w-full">
       <div className="flex-shrink-0 mr-4">
@@ -30,16 +31,19 @@ const CardMateri = ({ icon, title, progress }) => {
 const MateriSection = () => {
   const cardsData = [
     {
+      id: 1,
       icon: '/icon1.png',
       title: 'Penalaran Deduktif',
       progress: 15,
     },
     {
+      id: 2,
       icon: '/icon2.png',
       title: 'Penalaran Induktif',
       progress: 5,
     },
     {
+      id: 3,
       icon: '/icon3.png',
       title: 'Penalaran Kuantitatif',
       progress: 95,
@@ -50,6 +54,7 @@ const MateriSection = () => {
     <section className="px-10 py-5 flex justify-center">
       <div className="max-w-screen-lg w-full">
         <h2 className="text-2xl font-bold mb-8">Materi</h2>
+        <Link href="/lesson" >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
           {cardsData.map((card, index) => (
             <CardMateri
@@ -60,6 +65,7 @@ const MateriSection = () => {
             />
           ))}
         </div>
+        </Link>
       </div>
     </section>
   );

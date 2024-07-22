@@ -9,7 +9,10 @@ const Page = () => {
     <>
     <section className="flex w-full px-10 py-5 bg-[#EFD2C9]">
       <div className="flex gap-5">
-        <IconArrowLeft className="my-auto cursor-pointer" />
+      <Link href="/materi" className="my-auto">
+            <IconArrowLeft
+              className="cursor-pointer"
+        /></Link>
         <Image
           src="/materi1.jpeg"
           width={50}

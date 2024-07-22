@@ -4,6 +4,29 @@ import React from "react";
 import Image from "next/image";
 import { IconArrowLeft } from "@tabler/icons-react";
 
+const roadmapImage = [
+  {
+    id: 1,
+    src: "/materi1.jpeg",
+  },
+  {
+    id: 2,
+    src: "/materi2.jpeg",
+  },
+  {
+    id: 3,
+    src: "/materi3.jpeg",
+  },
+  {
+    id: 4,
+    src: "/materi4.jpeg",
+  },
+  {
+    id: 5,
+    src: "/materi5.png",
+  },
+];
+
 const Roadmap = ({ roadmap }) => {
   if (!roadmap) return null;
 
@@ -57,13 +80,18 @@ const Roadmap = ({ roadmap }) => {
           <div className="bg-white shadow-lg p-4 flex flex-col items-center">
             <h3 className="text-lg font-semibold mb-4">Milestone 1</h3>
             <div className="relative w-full">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px bg-gray-200 h-full"></div>
-              <div className="flex flex-col items-center">
-                {[...Array(5)].map((_, index) => (
-                  <div
-                    key={index}
-                    className="w-20 h-20 bg-gray-300 rounded-full mb-4"
-                  ></div>
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-px bg-black h-full"></div>
+              <div className="relative flex flex-col items-center">
+                {roadmapImage.map((image, index) => (
+                  <div key={index} className="flex flex-col items-center">
+                    <Image
+                      width={90}
+                      height={90}
+                      src={image.src}
+                      alt="materi"
+                      className="rounded-full mb-8 border-black"
+                    />
+                  </div>
                 ))}
               </div>
             </div>

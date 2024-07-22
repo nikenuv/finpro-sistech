@@ -3,29 +3,28 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import iconimg from "./../../../public/materi1.jpeg";
 
 const Menus = [
   {
     id: 1,
-    title: "Materi1: Peran Pemimpin dalam Pemberdayaan",
+    title: "Peran Pemimpin dalam Pemberdayaan",
     path: "/",
-    icon: iconimg,
+    icon: "/materi1.jpeg",
   },
   {
     id: 2,
-    title: "Materi2: Coaching sebagai Strategi...",
+    title: "Coaching sebagai Strategi...",
     path: "/",
-    icon: iconimg,
+    icon: "/materi1.jpeg",
   },
   {
     id: 3,
-    title: "Materi3: Perbedaan Coaching, Fasilitasi,...",
+    title: "Perbedaan Coaching, Fasilitasi,...",
     path: "/",
-    icon: iconimg,
+    icon: "/materi1.jpeg",
   },
-  { id: 4, title: "Latihan Pemahaman", path: "/", icon: iconimg },
-  { id: 5, title: "Diskusi & Saling Review", path: "/", icon: iconimg },
+  { id: 4, title: "Latihan Pemahaman", path: "/", icon: "/materi1.jpeg" },
+  { id: 5, title: "Diskusi & Saling Review", path: "/", icon: "/materi1.jpeg" },
 ];
 
 const SidebarMateri = ({ children, titleField, buttonField }) => {
@@ -47,6 +46,8 @@ const SidebarMateri = ({ children, titleField, buttonField }) => {
                       <Image
                         src={item.icon}
                         alt={`${item.title} icon`}
+                        width={40}
+                        height={40}
                         className="w-10 h-10 mb-2"
                       />
                         <span className="bg-gray-800 text-white w-full h-12 p-2 rounded-md text-center text-xs truncate">

@@ -1,14 +1,19 @@
 import React from "react";
 import Image from "next/image";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
-import SidebarMateri from "/SidebarMateri";
+import SidebarMateri from "./SidebarMateri";
+import Link from "next/link";
 
 const MateriPage = () => {
+
   return (
     <>
       <section className="flex w-full px-10 py-5 bg-[#EFD2C9]">
         <div className="mx-auto flex gap-5">
-          <IconArrowLeft className="my-auto cursor-pointer" />
+          <Link href="/materi" className="my-auto">
+            <IconArrowLeft
+              className="cursor-pointer"
+            /></Link>
           <Image
             src="/materi1.jpeg"
             width={50}
@@ -30,7 +35,8 @@ const MateriPage = () => {
       <div className="w-full flex bg-white">
         <SidebarMateri className="static" />
         <div className="w-[900px] ml-20 mt-10">
-          <video className="w-full bg-slate-100 my-2" controls />
+          <video className="w-full" controls
+            src="https://www.w3schools.com/html/mov_bbb.mp4" />
           <h1 className="font-bold text-xl mt-5">
             Peran Pemimpin dalam Pemberdayaan
           </h1>
