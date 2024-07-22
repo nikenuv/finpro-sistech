@@ -6,6 +6,6 @@ import Materi from "./Materi";
 import Recommendation from "./Recommendation";
 import Xp from "./Xp";
 
-import Materi2 from "../app/materi/page";
+import Materi2 from "../app/materi/[slug]/page";
 
 export { Navbar, Hero, Home, Progress, Materi, Recommendation, Xp, Materi2}

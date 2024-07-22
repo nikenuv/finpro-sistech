@@ -1,53 +1,38 @@
 import React from "react";
+import { IconArrowLeft } from "@tabler/icons-react";
 import Image from "next/image";
-import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
-import Sidebar from "./Sidebar2";
+import { IconSearch } from "@tabler/icons-react";
+import  CardMateri  from "@/components/CardMateri"
 
-const page = () => {
+const Page = () => {
   return (
     <>
-      <section className="flex w-full px-10 py-5 bg-[#EFD2C9]">
-        <div className="mx-auto flex gap-5">
-          <IconArrowLeft className="my-auto cursor-pointer" />
-          <Image
-            src="/materi1.jpeg"
-            width={50}
-            height={50}
-            className="rounded-xl"
-          />
-          <div className="grid grid-cols-2 gap-x-[500px]">
-            <p className="text-xs">Materi 1</p>
-            <p className="text-xs text-right">Kerjakan</p>
-            <p className="text-xl font-bold">
-              Peran Pemimpin dalam Pemberdayaan
-            </p>
-            <p className="text-lg text-right font-bold">Latihan Pemahaman</p>
-          </div>
-          <IconArrowRight className="my-auto cursor-pointer" />
-        </div>
-      </section>
-
-      <div className="w-full flex bg-white">
-        <Sidebar className="static" />
-        <div className="w-[900px] ml-20 mt-10">
-          <video className="w-full bg-slate-100 my-2" controls />
-          <h1 className="font-bold text-xl mt-5">
-            Peran Pemimpin dalam Pemberdayaan
-          </h1>
-          <p className="text-justify mt-3">
-            Kepala satuan pendidikan memaknai paradigma kepemimpinan sistem
-            among yang terkandung dalam semboyan pendidikan Indonesia yakni Ing
-            ngarso sung tulodo, Ing madya mangun karso, Tut wuri handayani.
-            Kepala satuan pendidikan akan belajar bagaimana menjadi seorang
-            pemimpin yang dapat memberdayakan potensi setiap individu dalam
-            komunitas pendidikan mereka. Referensi: Irayati, Monika dan Tim
-            Pengembang Modul. 2022. Paket Modul 2.3. Coaching untuk Supervisi
-            Akademik – Program Pendidikan Guru Penggerak
-          </p>
-        </div>
+    <section className="flex w-full px-10 py-5 bg-[#EFD2C9]">
+      <div className="flex gap-5">
+        <IconArrowLeft className="my-auto cursor-pointer" />
+        <Image
+          src="/materi1.jpeg"
+          width={50}
+          height={50}
+          className="rounded-xl"
+        />
+        <p className="text-xl font-bold my-auto">Penalaran Umum</p>
       </div>
+      <div className="search-bar flex ml-auto px-6 py-1 rounded-3xl border-primary-2 border-[1px] bg-white">
+        <IconSearch className="my-auto" />
+        <input
+          type="text"
+          placeholder="Cari Materi Belajar"
+          className="outline-none bg-white ml-2"
+        />
+      </div>
+    </section>
+    
+    <section className="flex flex-col gap-5 px-10 py-5">
+      <CardMateri />
+    </section>
     </>
   );
 };
 
-export default page;
+export default Page;
