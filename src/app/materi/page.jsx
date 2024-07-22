@@ -3,6 +3,7 @@ import { IconArrowLeft } from "@tabler/icons-react";
 import Image from "next/image";
 import { IconSearch } from "@tabler/icons-react";
 import  CardMateri  from "@/components/CardMateri"
+import Link from "next/link";
 
 const Page = () => {
   return (
