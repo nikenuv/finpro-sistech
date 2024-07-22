@@ -6,8 +6,8 @@ const ProgressCard = ({ imageSrc, moduleName, subject, progress }) => {
     <div className="card flex flex-col sm:flex-row items-center w-full max-w-xs p-4 bg-[#E6B2C0] rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
       <Image
         className="rounded-full"
-        width={80}
-        height={80}
+        width={70}
+        height={70}
         src={imageSrc}
         alt={`progress-${moduleName}`}
       />

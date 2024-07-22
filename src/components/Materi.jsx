@@ -1,24 +1,25 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Materi = () => {
   return (
     <section className="materi mx-5 md:mx-10 px-2">
-      <h3 className="mt-10 mb-5 font-bold text-xl md:text-2xl">
-        Materi
-      </h3>
+      <h3 className="mt-10 mb-5 font-bold text-xl md:text-2xl">Materi</h3>
       <div className="materi-wrapper flex flex-wrap justify-center gap-5">
         <div className="card w-full sm:w-[250px] h-[160px] py-5 border-[1px] border-[#E6B2C0] rounded-2xl flex flex-col items-center">
-          <Image
-            className="rounded-full"
-            width={70}
-            height={70}
-            src="/materi1.jpeg"
-            alt="materi 1"
-          />
-          <p className="text-center mt-2 text-sm sm:text-base">
-            Kemampuan Penalaran <br /> Umum
-          </p>
+          <Link href='/materi'>
+            <Image
+              className="rounded-full mx-auto"
+              width={70}
+              height={70}
+              src="/materi1.jpeg"
+              alt="materi 1"
+            />
+            <p className="text-center mt-2 text-sm sm:text-base">
+              Kemampuan Penalaran <br /> Umum
+            </p>
+          </Link>
         </div>
         <div className="card w-full sm:w-[250px] h-[160px] py-5 border-[1px] border-[#E6B2C0] rounded-2xl flex flex-col items-center">
           <Image

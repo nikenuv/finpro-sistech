@@ -1,8 +1,9 @@
 "use client";
 
-import React from 'react';
+import React from "react";
+import Image from "next/image";
 
-const Dashboard = () => {
+const Roadmap = () => {
   const skills = [
     { name: 'Kemampuan Penalaran Umum', progress: 25 },
     { name: 'Pengetahuan dan Pemahaman Umum', progress: 10 },
@@ -18,11 +19,17 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen bg-[#EFD2C9]">
       <div className="grid grid-cols-3 w-full p-4 gap-4">
         <div className="bg-white shadow-lg p-4">
           <div className="flex flex-col items-center mb-8">
-            <div className="bg-gray-300 w-20 h-20 rounded-full mb-4"></div>
+          <Image 
+            className="rounded-full"
+            width={100} 
+            height={100} 
+            src="/profile.jpeg" 
+            alt="profile"
+          />
             <h2 className="text-xl font-semibold">John Doe</h2>
           </div>
           <div className="mb-8">
@@ -33,9 +40,9 @@ const Dashboard = () => {
                   <span>{skill.name}</span>
                   <span>{skill.progress}%</span>
                 </div>
-                <div className="bg-gray-200 rounded-full h-2.5">
+                <div className="bg-[#7E9680] bg-opacity-50 rounded-full h-2.5">
                   <div
-                    className="bg-blue-600 h-2.5 rounded-full"
+                    className="bg-[#7E9680] h-2.5 rounded-full"
                     style={{ width: `${skill.progress}%` }}
                   ></div>
                 </div>
@@ -63,9 +70,9 @@ const Dashboard = () => {
         <div className="flex flex-col gap-4">
           <div className="bg-white p-4 rounded shadow-lg">
             <h3 className="text-lg font-semibold mb-4">Leaderboard</h3>
-            <p>You're ranked #143</p>
-            <p className="text-gray-500">Rangkingmu belum aman, yuk tingkatkan</p>
-            <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">View All</button>
+            <h1 className="font-bold text-xl">You're ranked #143</h1>
+            <p className="text-gray-500">Rangkingmu belum aman, yuk tingkatkan!</p>
+            <button className="mt-4 px-4 py-2 bg-[#7E9680] text-white rounded">View All</button>
           </div>
           <div className="bg-white p-4 rounded shadow-lg">
             <h3 className="text-lg font-semibold mb-4">Daily Quest</h3>
@@ -75,9 +82,9 @@ const Dashboard = () => {
                   <span>Icon</span>
                   <span>{quest.progress}/10</span>
                 </div>
-                <div className="bg-gray-200 rounded-full h-2.5">
+                <div className="bg-[#7E9680] bg-opacity-50 rounded-full h-2.5">
                   <div
-                    className="bg-blue-600 h-2.5 rounded-full"
+                    className="bg-[#7E9680] h-2.5 rounded-full"
                     style={{ width: `${(quest.progress / 10) * 100}%` }}
                   ></div>
                 </div>
@@ -90,4 +97,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Roadmap;

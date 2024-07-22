@@ -1,15 +1,13 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
 import Image from "next/image";
 import NextButton from "./../../../public/next-icon.png";
 import BackButton from "./../../../public/back-icon.png";
 import Icon from "./../../../public/icon.png";
 import Sidebar from "./Sidebar2";
 
-const Materi2 = () => {
+const page = () => {
   return (
     <>
-      {/* <Navbar /> */}
       <section className="flex gap-3 w-full py-3 px-10 bg-primary-2">
         <p>Beranda</p>
         <Image src={NextButton} className="w-4 h-4 mt-1" />
@@ -47,4 +45,4 @@ const Materi2 = () => {
   );
 };
 
-export default Materi2;
+export default page;

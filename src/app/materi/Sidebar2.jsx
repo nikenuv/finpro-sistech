@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import ButtonSlide from './../../../public/button-slide.png';
 import iconimg from './../../../public/materi1.jpeg';
 
 const Menus = [
@@ -19,21 +18,12 @@ const DashboardSection = ({ children, titleField, buttonField }) => {
 
   return (
     <section className=''>
-      <section className="relative flex">
+      <section className="flex">
         <div
           className={`${
             open ? 'max-w-[240px] min-w-[230px]' : 'max-w-[90px] min-w-[80px]'
-          } w-full bg-primary-3 h-screen p-5 fixed duration-300 flex-1`}
+          } w-full bg-primary-3 h-screen p-5 duration-300 flex-1`}
         >
-          <button onClick={() => setOpen(!open)} className="absolute cursor-pointer -right-2 top-4">
-            <Image
-              src={ButtonSlide}
-              width={28}
-              height={28}
-              alt="Toggle Sidebar"
-              className={`${open ? '' : 'rotate-180'} w-5 h-5 mt-1 duration-700`}
-            />
-          </button>
 
           <div className=''>
             <ul>
